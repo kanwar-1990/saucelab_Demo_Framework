@@ -33,12 +33,12 @@ public class BaseTest {
 		driver.get(browser);
 
 		loginpage = new loginPage(driver);
-		
+
 	}
 
 	@AfterTest
 	public void tearDown() {
-		//driver.quit();
+		driver.quit();
 	}
 
 }

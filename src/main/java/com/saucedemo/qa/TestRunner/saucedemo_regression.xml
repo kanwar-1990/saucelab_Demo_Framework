@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="saucedemo TestNGTesting Regression suite"
+	thread-count="6">
+	<!-- <listeners> <listener class-name="com.demo.opencart.qa.listeners.ExtentReportListener" 
+		/> </listeners> -->
+	<test name="MyRegression test--LoginPage" parallel="tests"
+		thread-count="2">
+
+		<!-- <parameter name="browser" value="Chrome" /> -->
+		<classes>
+			<class name="com.saucedemo.qa.test.loginPageTest" />
+		</classes>
+	</test>
+	<test name="MyRegression test--productinfoPage" parallel="tests">
+		<!-- <parameter name="browser" value="Chrome" /> -->
+		<classes>
+			<class name="com.saucedemo.qa.test.ProductInfoPageTest" />
+		</classes>
+	</test>
+	<test name="MyRegression test--AddtoCartPage" parallel="tests">
+		<!-- <parameter name="browser" value="Chrome" /> -->
+		<classes>
+			<class name="com.saucedemo.qa.test.AddtoCartPageTest" />
+		</classes>
+	</test>
+	<test name="MyRegression test--CheckOutPage" parallel="tests">
+		<!-- <parameter name="browser" value="Chrome" /> -->
+		<classes>
+			<class name="com.saucedemo.qa.test.CheckOutPageTest" />
+		</classes>
+	</test>
+
+</suite> 
+	
