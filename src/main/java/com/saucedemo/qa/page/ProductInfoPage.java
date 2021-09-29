@@ -6,6 +6,7 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 import com.saucedemo.qa.base.BasePage;
 
@@ -58,6 +59,23 @@ public class ProductInfoPage extends BasePage {
 
 		}
 		return new AddtoCartPage(driver);
+	}
+
+	public void SortingOnSelectDropDownAlpaanPriceWise(String Name_to_Price_up_down)
+
+	{
+		WebElement list = driver.findElement(By.cssSelector("select.product_sort_container"));
+		Select select = new Select(list);
+		List<WebElement> proposed_list = select.getOptions();
+
+		for (WebElement e : proposed_list) {
+			System.out.println(e.getText());
+
+			if (e.getText().equals("Name (Z to A)")) {
+				e.click();
+				break;
+			}
+		}
 	}
 
 }

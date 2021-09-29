@@ -28,8 +28,15 @@ public class ProductInfoPageTest extends BaseTest{
 		Assert.assertTrue(productinfopage.HeaderCount());
 	}
 	
-	
+
 	@Test(priority=3)
+	
+	public void SelectFromDropdownTest()
+	{
+		productinfopage.SortingOnSelectDropDownAlpaanPriceWise("Name (Z to A)");
+	}
+	
+	@Test(priority=4)
 	public void selectProductList()
 	{
 		productinfopage.SelectFromProductList("Sauce Labs Backpack");									
